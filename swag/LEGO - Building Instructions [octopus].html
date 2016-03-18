@@ -1,0 +1,2092 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Lego Digital Designer</title>
+		
+		<style type="text/css">
+			
+			div
+			{
+			    font-family:arial,sans-serif; 
+			    font-size: 11px;
+			    color:#000000;
+			}
+			
+			.header 
+			{
+			    width:1024px;
+			    background-image:url('Building Instructions [octopus]-images/Images/Header.png');
+			    background-repeat:repeat-x;
+			    background-color: #000000;
+			    height:40px;
+			    padding-left:10px;
+			}
+            
+            .headerPrint
+			{
+			    display:none;
+			}
+			
+			.footer
+			{
+			    font-size:10px;
+			    text-align:center;
+			    width:1024px;
+			}
+			
+			.nav
+			{
+			    text-align:center;
+			    width:1024px;
+			}
+			
+			.step
+			{
+			    display:none;
+			}
+
+			.stepdisplay
+			{
+			    display:block;
+			    width:1024px;
+			    height:620px;
+			}
+			
+			.modelParts 
+			{ 
+			    list-style-type:none; 
+			    padding:4px 0px 0px 0px; 
+			    margin:0px; 
+			}
+			.modelParts ul 
+			{ 
+			    list-style-type:none; 
+			    float:left; 
+			    padding:5px 0px 0px 5px; 
+			    width:140px; 
+			    border:1px dotted gray; 
+			    margin:0px 
+			 }
+			.modelParts ul li 
+			{ 
+			    padding:0px; 
+			    margin:0px 
+			}
+			.modelParts ul li img 
+			{ 
+			    padding:0px; 
+			    height:64px; 
+			    width:64px; 
+			    margin-left:15px 
+			}
+			
+			.stepTextTop p 
+			{ 
+			    margin:0px; 
+			    padding:10px 0px 0px 0px;  
+			 }
+			.stepText p
+			{ 
+			    margin:0px; 
+			    width:30px; 
+			    padding:25px 0px 0px 10px;
+			}
+            
+            .biElement
+            {
+                float:left;
+                margin:20px;
+                width:280px;
+                
+            }
+            
+            .stepelements
+            {
+                width:1024px;
+			    height:620px;
+                overflow:auto;
+            }
+            
+			
+		</style>
+
+        <style type="text/css" media="print">
+            .nav
+			{
+			    display:none;
+			}
+			
+			.stepdisplay
+			{
+			    display:none;
+			}
+            
+            .stepelements
+			{
+			    display:none;
+			}
+            
+            .header
+			{
+			    display:none;
+			}
+            
+            .headerPrint
+			{
+			    display:block;
+			}
+			
+			.step
+			{
+			    display:block;
+			    width:1024px;
+			    height:620px;
+			    page-break-after:always;
+			}
+            
+            .biElement
+            {
+                width:280px;                
+            }
+            
+        </style>
+
+        <script language="javascript" type="text/javascript">
+            
+            var biCurStep=0;
+            
+            function returnTest(e) {
+                var keynum = 0;
+                if (window.event) {
+                    keynum = e.keyCode
+                }
+                else if (e.which) {
+                    keynum = e.which
+                }
+                if (keynum == 13) 
+                {
+                    try {
+                        biStep(parseInt(window.document.getElementById('stepNumber').value,10));
+                    } 
+                    catch(err) {
+                        biStep(0);
+                    }
+                }
+            }
+
+            function biStep(step) {
+
+                if (step>94+1) step=94+1;
+                if (step<0) step=0;
+
+                for (var i=0;i<94+2;i++) {
+                    var id='step_' + i.toString();
+                    var cn='stepdisplay';
+                    if (i==94+1) {
+                        cn='stepelements';
+                        id='step_elements';
+                    }
+                    
+                    if (i==step) {
+                        window.document.getElementById('step_display').innerHTML=window.document.getElementById(id).innerHTML;
+						   window.document.getElementById('step_display').className=cn;
+                    }
+                }
+                window.document.getElementById('stepNumber').value=step.toString();
+                biCurStep=step;
+            }
+        </script>
+	</head>
+	<body onload="biStep(0)">
+        <div class="header"><img src="Building Instructions [octopus]-images/Images/Logo.png" /></div>
+        <div class="headerPrint"><img src="Building Instructions [octopus]-images/Images/Header_print.png" /></div>
+		
+        <div class="stepdisplay" id="step_display"></div>
+
+        <div class="step" id="step_0">
+            <div style="float:left;width:150px"><p>Model Name:<br /><span style="font-weight:bold">octopus</span><br /><br />Number of Bricks: <span style="font-weight:bold">258</span></p></div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step94.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+
+			
+        <div class="step" id="step_1">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 1 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick0.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick1.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick3.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step1.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_2">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 2 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>4 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick4.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step2.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_3">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 3 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick0.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick5.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step3.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_4">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 4 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step4.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_5">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 5 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step5.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_6">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 6 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step6.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_7">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 7 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step7.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_8">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 8 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step8.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_9">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 9 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step9.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_10">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 10 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step10.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_11">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 11 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step11.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_12">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 12 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step12.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_13">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 13 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick0.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick1.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick3.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step13.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_14">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 14 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>4 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick4.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step14.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_15">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 15 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick0.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick5.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step15.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_16">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 16 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step16.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_17">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 17 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step17.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_18">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 18 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step18.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_19">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 19 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step19.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_20">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 20 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step20.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_21">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 21 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step21.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_22">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 22 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step22.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_23">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 23 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step23.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_24">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 24 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step24.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_25">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 25 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick0.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick1.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick3.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step25.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_26">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 26 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>4 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick4.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step26.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_27">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 27 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick0.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick5.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step27.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_28">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 28 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step28.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_29">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 29 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step29.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_30">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 30 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step30.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_31">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 31 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step31.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_32">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 32 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step32.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_33">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 33 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step33.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_34">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 34 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step34.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_35">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 35 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step35.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_36">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 36 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step36.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_37">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 37 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick0.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick1.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick3.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step37.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_38">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 38 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>4 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick4.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step38.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_39">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 39 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick0.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick5.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step39.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_40">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 40 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step40.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_41">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 41 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step41.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_42">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 42 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step42.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_43">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 43 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step43.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_44">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 44 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step44.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_45">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 45 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step45.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_46">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 46 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step46.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_47">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 47 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step47.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_48">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 48 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step48.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_49">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 49 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick10.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step49.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_50">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 50 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>4 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step50.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_51">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 51 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick13.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step51.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_52">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 52 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>4 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step52.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_53">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 53 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>4 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step53.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_54">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 54 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick14.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step54.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_55">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 55 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick15.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step55.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_56">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 56 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick13.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step56.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_57">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 57 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick16.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick17.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick18.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step57.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_58">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 58 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick16.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick19.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step58.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_59">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 59 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick16.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick20.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step59.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_60">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 60 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick16.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick20.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step60.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_61">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 61 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick16.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick20.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step61.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_62">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 62 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick19.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick20.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick21.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick22.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step62.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_63">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 63 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick20.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick23.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step63.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_64">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 64 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick20.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick22.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step64.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_65">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 65 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step65.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_66">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 66 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick24.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step66.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_67">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 67 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step67.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_68">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 68 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick24.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step68.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_69">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 69 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step69.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_70">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 70 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick24.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step70.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_71">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 71 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step71.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_72">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 72 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick24.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step72.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_73">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 73 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step73.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_74">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 74 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick24.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step74.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_75">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 75 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step75.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_76">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 76 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick24.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step76.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_77">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 77 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step77.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_78">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 78 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick24.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step78.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_79">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 79 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step79.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_80">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 80 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick24.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step80.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_81">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 81 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step81.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_82">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 82 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick25.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick26.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step82.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_83">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 83 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>4 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick27.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step83.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_84">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 84 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick27.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick25.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick26.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step84.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_85">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 85 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick27.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick25.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step85.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_86">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 86 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick25.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick26.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick28.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step86.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_87">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 87 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick25.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step87.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_88">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 88 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick25.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step88.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_89">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 89 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick25.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step89.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_90">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 90 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick27.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick29.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick15.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step90.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_91">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 91 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick30.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick14.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick31.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick28.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step91.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_92">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 92 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick16.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick29.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [octopus]-images/Brick31.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step92.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_93">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 93 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step93.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_94">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 94 of 94</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [octopus]-images/Step94.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+
+        <div class="step" id="step_elements">
+            				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>9&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick27.png" /></td>
+					        <td>300321</td>
+					        <td>BRICK 2X2 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>10&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick16.png" /></td>
+					        <td>4244371</td>
+					        <td>ROOF TILE 1X1X2/3, PC - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick30.png" /></td>
+					        <td>4552203</td>
+					        <td>END RIDGED TILE 1X2/45° - Dark Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick19.png" /></td>
+					        <td>304521</td>
+					        <td>CORNER BRICK 2X2/45° OUTSIDE - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>10&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick20.png" /></td>
+					        <td>307021</td>
+					        <td>FLAT TILE 1X1 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>16&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick12.png" /></td>
+					        <td>302421</td>
+					        <td>PLATE 1X1 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>8&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick0.png" /></td>
+					        <td>4210631</td>
+					        <td>RADIATOR GRILLE 1X2 - Dark Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>16&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick4.png" /></td>
+					        <td>4162982</td>
+					        <td>FLAT TILE 1X2 - Black</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>4&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick1.png" /></td>
+					        <td>4211052</td>
+					        <td>FLAT TILE 1X2 - Dark Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>4&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick5.png" /></td>
+					        <td>4211414</td>
+					        <td>FLAT TILE 1X2 - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick21.png" /></td>
+					        <td>306921</td>
+					        <td>FLAT TILE 1X2 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>16&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick6.png" /></td>
+					        <td>4211398</td>
+					        <td>PLATE 1X2 - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick29.png" /></td>
+					        <td>302321</td>
+					        <td>PLATE 1X2 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick23.png" /></td>
+					        <td>243121</td>
+					        <td>FLAT TILE 1X4 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>3&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick15.png" /></td>
+					        <td>371021</td>
+					        <td>PLATE 1X4 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>16&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick7.png" /></td>
+					        <td>4211008</td>
+					        <td>FLAT TILE 1X8 - Dark Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick17.png" /></td>
+					        <td>4560179</td>
+					        <td>FLAT TILE 2X4 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick18.png" /></td>
+					        <td>366621</td>
+					        <td>PLATE 1X6 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick14.png" /></td>
+					        <td>302021</td>
+					        <td>PLATE 2X4 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>4&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick2.png" /></td>
+					        <td>4211452</td>
+					        <td>PLATE 2X6 - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick13.png" /></td>
+					        <td>379521</td>
+					        <td>PLATE 2X6 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>8&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick25.png" /></td>
+					        <td>303121</td>
+					        <td>PLATE 4X4 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>4&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick3.png" /></td>
+					        <td>4211406</td>
+					        <td>PLATE 2X8 - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick10.png" /></td>
+					        <td>4144302</td>
+					        <td>PLATE 6X6 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick31.png" /></td>
+					        <td>6060734</td>
+					        <td>FLAT TILE 2X2, ROUND - White</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>48&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick8.png" /></td>
+					        <td>4211803</td>
+					        <td>PLATE 1X2 W/STUB VERTICAL/END - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>34&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick11.png" /></td>
+					        <td>74230</td>
+					        <td>HINGE PLATE 1X2 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>16&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick9.png" /></td>
+					        <td>4211358</td>
+					        <td>ANGLE PLATE 1X2/1X4 - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>4&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick26.png" /></td>
+					        <td>243621</td>
+					        <td>ANGLE PLATE 1X2/1X4 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>8&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick24.png" /></td>
+					        <td>4247069</td>
+					        <td>PLATE 1X1 W/TOOTH - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick28.png" /></td>
+					        <td>393821</td>
+					        <td>PLATE 1X2 (ROCKING) - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [octopus]-images/Brick22.png" /></td>
+					        <td>393721</td>
+					        <td>ROCKER BEARING 1X2 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+
+            <div style="clear:both"></div>
+        </div>
+
+        <div id="nav"  class="nav">
+            <table style="margin:0 auto" border="0">
+                <tr>
+                    <td><a onclick="biStep(0);" href="#"><img border="0" alt="First" src="Building Instructions [octopus]-images/Images/Arrow_First.png" /></a></td>
+                    <td><a onclick="biStep(biCurStep-1);" href="#"><img border="0" alt="First" src="Building Instructions [octopus]-images/Images/Arrow_Backward.png" /></a></td>
+                    <td><input id="stepNumber" onkeydown="returnTest(window.event)" type="text" style="text-align:center;width:56px;height:28px;border:1px solid #cccccc;font-size:14px;font-weight:bold" /></td>
+                    <td><a onclick="biStep(biCurStep+1);" href="#"><img border="0" alt="First" src="Building Instructions [octopus]-images/Images/Arrow_Forward.png" /></a></td>
+                    <td><a onclick="biStep(94+1);" href="#"><img border="0" alt="First" src="Building Instructions [octopus]-images/Images/Arrow_Last.png" /></a></td>
+                    <td style="width:40px">&nbsp;</td>
+                    <td><a onclick="window.print();return false;" href="#"><img border="0" alt="Print" src="Building Instructions [octopus]-images/Images/PrintIcon.png" /></a></td>
+                </tr>
+            </table>
+        </div> 
+		<div style="clear:both;">&nbsp;</div>
+		<div class="footer">© 2012 The LEGO Group. All rights reserved.<br />
+Use of the LEGO Digital Designer html print tool, signifies your agreement to the terms of use.</div>
+	</body>
+</html>
